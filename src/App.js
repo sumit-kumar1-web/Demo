@@ -53,6 +53,7 @@ class App extends Component {
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
+      // New change
       ':hover': {
         backgroundColor: 'grey',
         color: 'orangered'
