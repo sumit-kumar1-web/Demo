@@ -76,11 +76,11 @@ class App extends Component {
         </div>
       );
       style.backgroundColor = 'red';
-      // style[':hover'] = {
-      //   // boxShadow: 0 4px 6px #aaa,
-      //   backgroundColor: 'grey',
-      //   color: 'orangered'
-      // }
+      style[':hover'] = {
+        // boxShadow: 0 4px 6px #aaa,
+        backgroundColor: 'grey',
+        color: 'orangered'
+      }
     }
     const classes = [];
     if(this.state.persons.length <=2){
