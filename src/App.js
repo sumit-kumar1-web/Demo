@@ -53,11 +53,11 @@ class App extends Component {
       border: '1px solid blue',
       padding: '8px',
       cursor: 'pointer',
-      ':hover': {
-        // boxShadow: 0 4px 6px #aaa,
-        backgroundColor: 'grey',
-        color: 'orangered'
-      }
+      // ':hover': {
+      //   // boxShadow: 0 4px 6px #aaa,
+      //   backgroundColor: 'grey',
+      //   color: 'orangered'
+      // }
     };
 
     let persons = null;
