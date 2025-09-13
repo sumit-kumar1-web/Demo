@@ -54,7 +54,6 @@ class App extends Component {
       padding: '8px',
       cursor: 'pointer',
       ':hover': {
-        // boxShadow: 0 4px 6px #aaa,
         backgroundColor: 'grey',
         color: 'orangered'
       }
