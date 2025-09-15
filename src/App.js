@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import './App.css';
 import Radium, { StyleRoot } from 'radium';
 import Person from './Person/Person';
 
+const StyledButton = styled.button`
+      background-color: ${props=>props.alt ? 'red' : 'green'};
+      color: white;
+      font: inherit;
+      border: 1px solid blue; 
+      padding: 8px ;
+      cursor: pointer; 
+      &:hover {
+        background-color: grey;
+        color: orangered;
+`;
 class App extends Component {
   state = {
     persons: [
@@ -47,17 +59,17 @@ class App extends Component {
 
   render () {
     const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-      // New change
-      ':hover': {
-        backgroundColor: 'grey',
-        color: 'orangered'
-      }
+      // backgroundColor: 'green',
+      // color: 'white',
+      // font: 'inherit',
+      // border: '1px solid blue',
+      // padding: '8px',
+      // cursor: 'pointer',
+      // // New change
+      // ':hover': {
+      //   backgroundColor: 'grey',
+      //   color: 'orangered'
+      // }
     };
 
     let persons = null;
@@ -76,8 +88,7 @@ class App extends Component {
         </div>
       );
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        // boxShadow: 0 4px 6px #aaa,
+      style [':hover'] = {
         backgroundColor: 'grey',
         color: 'orangered'
       }
@@ -91,14 +102,16 @@ class App extends Component {
     }
 
     return (
+      <StyleRoot>
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p className={classes.join(' ')}>This is really working!</p>
-        <button
-          style={style}
-          onClick={this.togglePersonsHandler}>Toggle Persons</button>
+        <StyledButton
+        alt={this.state.showPersons}
+          onClick={this.togglePersonsHandler}>Toggle Persons</StyledButton>
         {persons}
       </div>
+      </StyleRoot>
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
