@@ -6,8 +6,9 @@
     padding: 16px;
     text-align: center;
 } 
-/* .Person:hover {
+.Person:hover {
     box-shadow: 0 4px 6px #aaa;
     background-color: #ccc;
     color: orangered;
-} */
+    cursor: pointer;
+}
