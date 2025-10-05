@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Radium, { StyleRoot } from 'radium';
 import Person from '../components/persons/Person/Person';
+// import Cockpit from '../components/persons/cockpit/cockpit';
 
 const StyledButton = styled.button`
       background-color: ${(props)=>props.alt ? 'red' : 'green'};
